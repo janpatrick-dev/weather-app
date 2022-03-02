@@ -1,0 +1,65 @@
+:root {
+  --color-black: #000;
+  --color-black-value: 0, 0, 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: black;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 62.5%;
+}
+
+.weather__main-text {
+  color: white;
+}
+.weather__main-text--temp {
+  font-size: 5rem;
+}
+.weather__main-text--city {
+  font-size: 3rem;
+  margin-left: 2rem;
+}
+
+.weather {
+  max-width: 1200px;
+  min-height: 700px;
+  margin: auto;
+  background-image: url(../img/cloudy.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.weather__left {
+  font-family: "Exo 2", sans-serif;
+  flex-basis: 60%;
+  position: relative;
+}
+.weather__main-textbox {
+  position: absolute;
+  left: 20%;
+  bottom: 10%;
+  transform: translate(-20%, -10%);
+}
+.weather__right {
+  background-color: rgba(var(--color-black-value), 0.85);
+  backdrop-filter: blur(3px);
+  flex-basis: 40%;
+}
+
+/*# sourceMappingURL=style.css.map */

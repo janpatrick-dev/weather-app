@@ -1,0 +1,36 @@
+.weather {
+  max-width: 1200px;
+  min-height: 700px;
+  margin: auto;
+  background-image: url(../img/cloudy.jpg);
+  background-size: cover;
+  background-position: center;
+
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  &__left {
+    // background-color: orange;
+    font-family: 'Exo 2', sans-serif;
+    flex-basis: 60%;
+    position: relative;
+  }
+
+  &__main-textbox {
+    position: absolute;
+    left: 20%;
+    bottom: 10%;
+    transform: translate(-20%, -10%);
+  }
+
+  &__right {
+    background-color: rgba(var(--color-black-value), 0.85);
+    backdrop-filter: blur(3px);
+    flex-basis: 40%;
+  }
+}

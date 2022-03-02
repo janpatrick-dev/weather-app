@@ -1,0 +1,21 @@
+:root {
+  --color-black: #000;
+  --color-black-value: 0, 0, 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: black;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 62.5%;
+}

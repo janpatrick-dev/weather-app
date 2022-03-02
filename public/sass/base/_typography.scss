@@ -1,0 +1,14 @@
+.weather__main-text {
+  color: white;
+  // font-size: 3rem;
+  // -webkit-text-stroke: 1px var(--color-black);
+
+  &--temp {
+    font-size: 5rem;
+  }
+
+  &--city {
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
+}
