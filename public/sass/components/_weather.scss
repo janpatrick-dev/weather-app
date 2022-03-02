@@ -14,23 +14,76 @@
 
   display: flex;
 
-  &__left {
-    // background-color: orange;
-    font-family: 'Exo 2', sans-serif;
+  &__left,
+  &__left-empty {
     flex-basis: 60%;
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  &__main-textbox {
-    position: absolute;
-    left: 20%;
-    bottom: 10%;
-    transform: translate(-20%, -10%);
+  &__left {
+
+    &-content {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      left: 15%;
+      bottom: 5%;
+      transform: translate(-15%, -5%);
+    }
+
+  }
+
+  &__left-empty {
+   
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__temp-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__city-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__icon {
+    
   }
 
   &__right {
     background-color: rgba(var(--color-black-value), 0.85);
     backdrop-filter: blur(3px);
     flex-basis: 40%;
+  }
+
+  &__details {
+    padding: 5rem;
+
+    &--content {
+      margin-top: 2rem;
+      display: flex;
+      gap: .5rem;
+      flex-direction: column;
+    }
+
+    &--text-group {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
