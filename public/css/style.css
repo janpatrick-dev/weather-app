@@ -1,6 +1,8 @@
 :root {
+  --color-white: #fff;
   --color-black: #000;
   --color-black-value: 0, 0, 0;
+  --color-light-grey-1: #bdbdbd;
 }
 
 * {
@@ -28,7 +30,7 @@ body {
 }
 
 .weather__main-text {
-  color: white;
+  color: var(--color-white);
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -49,7 +51,7 @@ body {
 
 .weather__left,
 .weather__left-empty {
-  color: white;
+  color: var(--color-white);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -63,6 +65,14 @@ body {
   font-weight: 400;
 }
 
+.weather__temp-unit {
+  font-size: 2.5rem;
+  color: var(--color-light-grey-1);
+}
+.weather__temp-unit--active {
+  color: var(--color-white);
+}
+
 .weather__city--name {
   font-size: 2.5rem;
 }
@@ -71,7 +81,7 @@ body {
 }
 
 .weather__details--text-group {
-  color: white;
+  color: var(--color-white);
   font-size: 1.5rem;
 }
 .weather__details--label {
@@ -86,7 +96,7 @@ body {
 }
 
 .header-tertiary {
-  color: white;
+  color: var(--color-white);
   font-size: 2.5rem;
   font-weight: 400;
 }
@@ -132,13 +142,30 @@ body {
 }
 .weather__temp-group {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 1rem;
 }
+.weather__temp-units {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.weather__temp-unit--c {
+  cursor: pointer;
+}
+.weather__temp-unit--divider {
+  cursor: context-menu;
+  font-weight: 100;
+}
+.weather__temp-unit--f {
+  cursor: pointer;
+}
 .weather__city-group {
+  padding-left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-left: 1px solid var(--color-light-grey-1);
 }
 .weather__icon-group {
   display: flex;

@@ -12,8 +12,10 @@ function WeatherDetails() {
   const [units, setUnits] = useState('metric');
   
   useEffect(() => {
-    if (cityToSearch) {
-      Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityToSearch}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
+    // if (cityToSearch) {
+    if (true) {
+      // Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityToSearch}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
+      Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Manila&units=${units}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
       .then(response => {
         setWeatherDetails(response.data);
         console.log(response.data);
@@ -22,7 +24,7 @@ function WeatherDetails() {
         console.log(err);
       });
     }
-  }, [cityToSearch])
+  }, [cityToSearch, units])
 
   function handleSearchInput(event) {
     const cityName = event.target.value;
@@ -33,8 +35,18 @@ function WeatherDetails() {
     setCityToSearch(city);
   }
 
+  function handleUnitChange(event) {
+    const selectedUnit = event.target.dataset.unit;
+    setUnits(selectedUnit === 'C' ? 'metric' : 'imperial');
+    console.log(selectedUnit);
+  }
+
   function isWeatherDetailsEmpty() {
     return Object.keys(weatherDetails).length === 0;
+  }
+
+  function isMetric() {
+    return units === 'metric';
   }
   
   return !isWeatherDetailsEmpty() ? (
@@ -51,6 +63,21 @@ function WeatherDetails() {
             <span className="weather__temp-value">
               {Math.round(weatherDetails.main.temp)}&deg;
             </span>
+            <p className="weather__temp-units">
+              <span 
+                className={`weather__temp-unit weather__temp-unit--c ${isMetric() ? "weather__temp-unit--active" : ""}`} 
+                onClick={handleUnitChange} 
+                data-unit="C">
+                C
+              </span>
+              <span className="weather__temp-unit weather__temp-unit--divider">|</span>
+              <span 
+                className={`weather__temp-unit weather__temp-unit--c ${!isMetric() ? "weather__temp-unit--active" : ""}`} 
+                onClick={handleUnitChange} 
+                data-unit="F">
+                F
+              </span>
+            </p>
           </div>
           <div className="weather__city-group">
             <span className="weather__city--name">

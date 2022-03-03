@@ -49,14 +49,39 @@
 
   &__temp-group {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 1rem;
   }
 
+  &__temp-units {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__temp-unit {
+    
+    &--c {
+      cursor: pointer;
+    }
+
+    &--divider {
+      cursor: context-menu;
+      font-weight: 100;
+    }
+
+    &--f {
+      cursor: pointer;
+    }
+  }
+
   &__city-group {
+    padding-left: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    border-left: 1px solid var(--color-light-grey-1);
   }
 
   &__icon-group {
