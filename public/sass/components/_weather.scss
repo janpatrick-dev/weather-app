@@ -27,15 +27,13 @@
   &__left {
 
     &-content {
+      background-color: rgba(var(--color-black-value), 0.3);
+      border-radius: 3px;
+      padding: 2rem;
       display: flex;
       gap: 1rem;
       justify-content: center;
       align-items: center;
-
-      position: absolute;
-      left: 15%;
-      bottom: 5%;
-      transform: translate(-15%, -5%);
     }
 
   }
@@ -61,8 +59,22 @@
     justify-content: center;
   }
 
+  &__icon-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+  }
+
   &__icon {
-    
+    width: 80px;
+    height: 80px;
+    padding: 0;
+  }
+
+  &__icon-description {
+    max-width: 80px;
+    text-align: center;
   }
 
   &__right {

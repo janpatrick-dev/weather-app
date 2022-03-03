@@ -53,16 +53,20 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.weather__icon-description {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
 .weather__temp-value {
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 400;
 }
 
-.weather__city-name {
-  font-size: 4rem;
+.weather__city--name {
+  font-size: 2.5rem;
 }
-
-.weather__city-datetime {
+.weather__city--datetime {
   font-size: 1.5rem;
 }
 
@@ -70,16 +74,13 @@ body {
   color: white;
   font-size: 1.5rem;
 }
-
 .weather__details--label {
   text-transform: capitalize;
   font-weight: 100;
 }
-
 .weather__details--value {
   font-weight: 400;
 }
-
 .weather__details--weather-desc {
   text-transform: capitalize;
 }
@@ -116,14 +117,13 @@ body {
   align-items: center;
 }
 .weather__left-content {
+  background-color: rgba(var(--color-black-value), 0.3);
+  border-radius: 3px;
+  padding: 2rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  left: 15%;
-  bottom: 5%;
-  transform: translate(-15%, -5%);
 }
 .weather__left-empty-content {
   display: flex;
@@ -139,6 +139,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.weather__icon-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weather__icon {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+}
+.weather__icon-description {
+  max-width: 80px;
+  text-align: center;
 }
 .weather__right {
   background-color: rgba(var(--color-black-value), 0.85);
