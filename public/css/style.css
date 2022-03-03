@@ -146,7 +146,7 @@ body {
   gap: 1rem;
 }
 .weather__temp-units {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
 }
