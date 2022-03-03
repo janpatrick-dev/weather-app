@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import WeatherDetails from './WeatherDetails';
 
 function WeatherRight(props) {
 
@@ -24,38 +25,14 @@ function WeatherRight(props) {
         <div className="weather__details">
           <h3 className="header-tertiary">Weather Details</h3>
           <div className="weather__details--content">
-            <div className="weather__details--text-group">
-              <p className="weather__details--label">Weather</p>
-              <p className="weather__details--value weather__details--weather-desc">{weatherData.weather[0].description}</p>
-            </div>
-            <div className="weather__details--text-group">
-              <p className="weather__details--label">Temp</p>
-              <p className="weather__details--value">{(Math.round(weatherData.main.temp * 10) / 10).toFixed(1)}&deg;</p>
-            </div>
-            <div className="weather__details--text-group">
-              <p className="weather__details--label">Temp. Min</p>
-              <p className="weather__details--value">{(Math.round(weatherData.main.temp_min * 10) / 10).toFixed(1)}&deg;</p>
-            </div>
-            <div className="weather__details--text-group">
-              <p className="weather__details--label">Temp. Max</p>
-              <p className="weather__details--value">{(Math.round(weatherData.main.temp_max * 10) / 10).toFixed(1)}&deg;</p>
-            </div>
-            <div className="weather__details--text-group">
-              <p className="weather__details--label">Humidity</p>
-              <p className="weather__details--value">{weatherData.main.humidity}%</p>
-            </div>
-            <div className="weather__details--text-group">
-              <p className="weather__details--label">Wind</p>
-              <p className="weather__details--value">{`${Math.round(weatherData.wind.speed * 3.6)} km/h`}</p>
-            </div>
-            <div className="weather__details--text-group">
-              <p className="weather__details--label">Gusts</p>
-              <p className="weather__details--value">{weatherData.wind.gust ? `${Math.round(weatherData.wind.gust * 3.6)} km/h` : "N/A"}</p>
-            </div>
-            <div className="weather__details--text-group">
-              <p className="weather__details--label">Visibility</p>
-              <p className="weather__details--value">{`${weatherData.visibility / 1000} km`}</p>
-            </div>
+            <WeatherDetails label="Weather" detailName="weather" weatherData={weatherData} units={props.units} capitalize={true} />
+            <WeatherDetails label="Temp" detailName="temp" weatherData={weatherData} units={props.units} />
+            <WeatherDetails label="Temp Min." detailName="temp_min" weatherData={weatherData} units={props.units} />
+            <WeatherDetails label="Temp Max." detailName="temp_max" weatherData={weatherData} units={props.units} />
+            <WeatherDetails label="Humidity" detailName="humidity" weatherData={weatherData} units={props.units} />
+            <WeatherDetails label="Wind" detailName="wind" weatherData={weatherData} units={props.units} />
+            <WeatherDetails label="Gusts" detailName="gusts" weatherData={weatherData} units={props.units} />
+            <WeatherDetails label="Visibility" detailName="visibility" weatherData={weatherData} units={props.units} />
           </div>
         </div>
       </div>

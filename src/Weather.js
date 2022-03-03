@@ -12,7 +12,7 @@ function WeatherDetails() {
   
   useEffect(() => {
     if (cityToSearch) {
-      Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityToSearch}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
+      Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityToSearch}&units=${units}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
       .then(response => {
         setWeatherData(response.data);
         console.log(response.data);
