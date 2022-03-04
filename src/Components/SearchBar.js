@@ -16,10 +16,9 @@ function SearchBar(props) {
         Axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=10&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
         .then(response => {
           setFilteredData(response.data);
-          console.log(response.data);
         })
         .catch(err => {
-  
+          console.log(err);
         })
       }, 500);
       return () => clearTimeout(timeOutId);

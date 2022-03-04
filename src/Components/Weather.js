@@ -11,11 +11,10 @@ function WeatherDetails() {
   const [units, setUnits] = useState('metric');
   
   useEffect(() => {
-    if (location) {
+    if (Object.keys(location).length !== 0) {
       Axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lon}&units=${units}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
       .then(response => {
         setWeatherData(response.data);
-        console.log(response.data);
       })
       .catch(err => {
         console.log(err);
