@@ -3,6 +3,19 @@ body {
   font-weight: 400;
 }
 
+.header-tertiary {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+//////////////// WEATHER MAIN CONTENT /////////////////
+
+/////////////////// LEFT SIDE ////////////////////
+.weather__main-textbox {
+  text-align: center;
+}
+
 .weather__main-text {
   color: var(--color-white);
   display: flex;
@@ -63,6 +76,7 @@ body {
   }
 }
 
+/////////////////// RIGHT SIDE ////////////////////
 .weather__details {
   
   &--text-group {
@@ -82,14 +96,4 @@ body {
   &--weather-desc {
     text-transform: capitalize;
   }
-}
-
-.header-tertiary {
-  color: var(--color-white);
-  font-size: 2.5rem;
-  font-weight: 400;
-}
-
-.weather__main-textbox {
-  text-align: center;
 }

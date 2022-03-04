@@ -14,6 +14,7 @@
 
   display: flex;
 
+  //////////////// LEFT SIDE /////////////////
   &__left,
   &__left-empty {
     flex-basis: 60%;
@@ -102,6 +103,9 @@
     text-align: center;
   }
 
+
+  
+  //////////////// RIGHT SIDE /////////////////
   &__right {
     background-color: rgba(var(--color-black-value), 0.85);
     backdrop-filter: blur(3px);
