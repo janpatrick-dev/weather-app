@@ -25,6 +25,8 @@ function WeatherDetails(props) {
         return weatherData.wind.gust ? convertToKilometerPerHour(weatherData.wind.gust) : "N/A";
       case "visibility":
         return `${weatherData.visibility / 1000} km`;
+      default:
+        return "N/A";
     }
   }
 
