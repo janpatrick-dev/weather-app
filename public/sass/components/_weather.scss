@@ -110,10 +110,14 @@
     background-color: rgba(var(--color-black-value), 0.85);
     backdrop-filter: blur(3px);
     flex-basis: 40%;
+
+    &-content {
+      padding: 5rem;
+    }
   }
 
   &__details {
-    padding: 5rem;
+    margin-top: 4rem;
 
     &--content {
       margin-top: 2rem;

@@ -18,7 +18,7 @@ function WeatherLeft(props) {
     <div className="weather__left">    
       <div className="weather__left-content">
         <div className="weather__icon-group">
-          <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} className="weather__icon" />
+          <img src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="Weather Icon" className="weather__icon" />
           <span className="weather__icon-description">
             {weatherData.weather[0].description}
           </span>
@@ -45,8 +45,9 @@ function WeatherLeft(props) {
         </div>
         <div className="weather__city-group">
           <span className="weather__city--name">
-            {weatherData.name}
-            {weatherData.sys.country ? `, ${weatherData.sys.country}` : null}
+            {props.location.city}
+            {props.location.state ? `, ${props.location.state}` : null}
+            {props.location.country ? `, ${props.location.country}` : null}
           </span>
           <span className="weather__city--datetime">
             {new Date(weatherData.dt * 1000).toUTCString()}
@@ -65,7 +66,7 @@ function WeatherLeft(props) {
           </h2>
         </div>
         <div className="weather__icon-box">
-          <img src="http://openweathermap.org/img/wn/11d@2x.png" className="weather__icon" />
+          <img src="https://openweathermap.org/img/wn/11d@2x.png" alt="Weather Icon" className="weather__icon" />
         </div>
       </div>
     </div>

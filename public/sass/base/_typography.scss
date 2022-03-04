@@ -43,7 +43,7 @@ body {
 .weather__left,
 .weather__left-empty {
   color: var(--color-white);
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
 }
 
 .weather__icon-description {
@@ -95,5 +95,12 @@ body {
   
   &--weather-desc {
     text-transform: capitalize;
+  }
+}
+
+.searchbar {
+
+  &__result {
+    font-size: 1.4rem;
   }
 }

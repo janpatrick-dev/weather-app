@@ -1,27 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
+import SearchBar from './SearchBar';
 import WeatherDetails from './WeatherDetails';
 
 function WeatherRight(props) {
 
   const weatherData = props.weatherData;
-  const [city, setCity] = useState('');
-
-  function handleSearchInput(event) {
-    const cityName = event.target.value;
-    setCity(cityName);
-  }
-
-  function handleSearchClick(event) {
-    props.onSearch(city);
-  }
   
   return Object.keys(weatherData).length !== 0 ? (
     <div className="weather__right">
       <div className="weather__right-content">
-        <div className="weather__search-box">
-          <input type="text" value={city} onChange={handleSearchInput} />
-          <button type="submit" onClick={handleSearchClick}>Search</button>
-        </div>
+        <SearchBar onSearch={props.onSearch} />
         <div className="weather__details">
           <h3 className="header-tertiary">Weather Details</h3>
           <div className="weather__details--content">
@@ -39,8 +27,9 @@ function WeatherRight(props) {
     </div>
   ) : (
     <div className="weather__right">
-      <input type="text" value={city} onChange={handleSearchInput} />
-      <button type="submit" onClick={handleSearchClick}>Search</button>
+      <div className="weather__right-content">
+        <SearchBar onSearch={props.onSearch} />
+      </div>
     </div>
   );
 }
