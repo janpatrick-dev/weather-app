@@ -1,0 +1,28 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-black-value: 0, 0, 0;
+  
+  --color-light-grey-1: #bdbdbd;
+
+  --color-dark-grey-1: #777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: black;
+}

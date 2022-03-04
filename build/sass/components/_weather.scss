@@ -1,0 +1,134 @@
+.weather {
+  max-width: 1200px;
+  min-height: 700px;
+  margin: auto;
+  background-image: url(../img/cloudy.jpg);
+  background-size: cover;
+  background-position: center;
+
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  //////////////// LEFT SIDE /////////////////
+  &__left,
+  &__left-empty {
+    flex-basis: 60%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__left {
+
+    &-content {
+      background-color: rgba(var(--color-black-value), 0.3);
+      border-radius: 3px;
+      padding: 2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+
+  &__left-empty {
+   
+    &-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__temp-group {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  &__temp-units {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__temp-unit {
+    
+    &--c {
+      cursor: pointer;
+    }
+
+    &--divider {
+      cursor: context-menu;
+      font-weight: 100;
+    }
+
+    &--f {
+      cursor: pointer;
+    }
+  }
+
+  &__city-group {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-left: 1px solid var(--color-light-grey-1);
+  }
+
+  &__icon-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+  }
+
+  &__icon-description {
+    max-width: 80px;
+    text-align: center;
+  }
+
+
+  
+  //////////////// RIGHT SIDE /////////////////
+  &__right {
+    background-color: rgba(var(--color-black-value), 0.85);
+    backdrop-filter: blur(3px);
+    flex-basis: 40%;
+
+    &-content {
+      padding: 5rem;
+    }
+  }
+
+  &__details {
+    margin-top: 4rem;
+
+    &--content {
+      margin-top: 2rem;
+      display: flex;
+      gap: .5rem;
+      flex-direction: column;
+    }
+
+    &--text-group {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
