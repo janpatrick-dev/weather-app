@@ -1,0 +1,70 @@
+.searchbar__container {
+  position: relative;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid var(--color-dark-grey-1);
+
+  &__label {
+    // Hide label, style is used for lighthouse accessibility issue
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    clip: rect(1px,1px,1px,1px);
+    border: 0;
+    overflow: hidden
+  }
+
+  &__input {
+    padding: 1rem 3rem 1rem 1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    flex: 1;
+
+    color: var(--color-white);
+  }
+
+  &__icon {
+    margin-left: -3rem;
+    display: inline-block;
+    width: 30px !important;
+    height: 30px !important;
+    color: var(--color-white);
+
+    &--img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__result {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    position: absolute;
+
+    &--item {
+      background-color: var(--color-white);
+      padding: 1rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--color-black);
+      }
+
+      &:hover {
+        background-color: var(--color-light-grey-1);
+        cursor: pointer;
+      }
+    }
+  }
+}

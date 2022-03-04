@@ -1,0 +1,106 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+.header-tertiary {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+//////////////// WEATHER MAIN CONTENT /////////////////
+
+/////////////////// LEFT SIDE ////////////////////
+.weather__main-textbox {
+  text-align: center;
+}
+
+.weather__main-text {
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  &--temp {
+    font-size: 6rem;
+  }
+
+  &--city-group {
+    // display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+  }
+
+  &--city {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+}
+
+.weather__left,
+.weather__left-empty {
+  color: var(--color-white);
+  // font-family: 'Open Sans', sans-serif;
+}
+
+.weather__icon-description {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.weather__temp-value {
+  font-size: 7rem;
+  font-weight: 400;
+}
+
+.weather__temp-unit {
+  font-size: 2.5rem;
+  color: var(--color-light-grey-1);
+
+  &--active {
+    color: var(--color-white);
+  }
+}
+
+.weather__city {
+
+  &--name {
+    font-size: 2.5rem;
+  }
+  
+  &--datetime {
+    font-size: 1.5rem;
+  }
+}
+
+/////////////////// RIGHT SIDE ////////////////////
+.weather__details {
+  
+  &--text-group {
+    color: var(--color-white);
+    font-size: 1.5rem;
+  }
+
+  &--label {
+    text-transform: capitalize;
+    font-weight: 100;
+  }
+  
+  &--value {
+    font-weight: 400;
+  }
+  
+  &--weather-desc {
+    text-transform: capitalize;
+  }
+}
+
+.searchbar {
+
+  &__result {
+    font-size: 1.4rem;
+  }
+}
