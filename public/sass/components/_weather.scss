@@ -14,6 +14,11 @@
 
   display: flex;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+    height: 100vh;
+  }
+
   //////////////// LEFT SIDE /////////////////
   &__left,
   &__left-empty {
@@ -23,12 +28,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include respond(tab-port) {
+      flex: 0 0 50%;
+    }
   }
 
   &__left {
+    background-color: rgba(var(--color-black-value), 0.2);
 
     &-content {
-      background-color: rgba(var(--color-black-value), 0.3);
       border-radius: 3px;
       padding: 2rem;
       display: flex;
@@ -37,15 +46,6 @@
       align-items: center;
     }
 
-  }
-
-  &__left-empty {
-   
-    &-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
   }
 
   &__temp-group {
@@ -78,6 +78,7 @@
 
   &__city-group {
     padding-left: 1rem;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,8 +112,16 @@
     backdrop-filter: blur(3px);
     flex-basis: 40%;
 
+    @include respond(tab-port) {
+      flex: 0 0 50%;
+    }
+
     &-content {
-      padding: 5rem;
+      margin: 5rem;
+
+      @include respond(tab-port) {
+        margin: 10rem;
+      }
     }
   }
 
