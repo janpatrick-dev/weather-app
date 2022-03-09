@@ -220,7 +220,7 @@ body {
     height: 100vh;
   }
 }
-.weather__left, .weather__left-empty {
+.weather__left {
   flex-basis: 60%;
   position: relative;
   display: flex;
@@ -228,7 +228,7 @@ body {
   align-items: center;
 }
 @media only screen and (max-width: 56.25em) {
-  .weather__left, .weather__left-empty {
+  .weather__left {
     flex: 0 0 50%;
   }
 }

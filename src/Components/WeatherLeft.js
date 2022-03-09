@@ -3,6 +3,7 @@ import React from 'react';
 function WeatherLeft(props) {
 
   const weatherData = props.weatherData;
+  const date = new Date(weatherData.dt * 1000);
 
   function handleUnitChange(event) {
     const selectedUnit = event.target.dataset.unit;
@@ -50,7 +51,7 @@ function WeatherLeft(props) {
             {props.location.country ? `, ${props.location.country}` : null}
           </span>
           <span className="weather__city--datetime">
-            {new Date(weatherData.dt * 1000).toUTCString()}
+            {date ? `${date.toDateString()}, ${date.toLocaleTimeString()}` : "---"}
           </span>
         </div>
       </div>
